@@ -1,4 +1,6 @@
-## Pneumatic Artificial Muscle Nonlinear Dynamics Analysis
+## Pneumatic Artificial Muscle Nonlinear Dynamics Analysis  -  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18737435.svg)](https://doi.org/10.5281/zenodo.18737435)
+
+
 **Nonlinear GNC framework for Pneumatic Artificial Muscles (PAMs). Features NLARX system identification (Sigmoid, Wavelet, idTreePartition) and robust state estimation (Kalman Filters) designed to reject complex hysteresis-induced bias and non-differentiable gradient spikes. Also contains Monte Carlo regarding Unscented Kalman Filter and Model Predictive Control.** 
 
 **Preface**: Traditional industry estimators (EKF/CKF) and controls fail to estimate/ predict soft-actuator dynamics due to inherent nonlinear hysteresis and non-differentiable gradient spikes. This repository contains a high-performance skeleton of the Guidance, Navigation, and Control (GNC) framework for stable open-loop modeling and closed-loop control of McKibben Artifical Muscles. Three reports demonstrates a full-stack engineering pipeline: from identifying non-differentiable plant dynamics to implementing derivative-free state estimation and nonlinear model predictive control over nonlinear hysteretic actuators.
