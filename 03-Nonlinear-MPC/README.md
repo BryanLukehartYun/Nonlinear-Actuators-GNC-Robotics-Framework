@@ -17,6 +17,7 @@ While standard industrial controllers like PID are computationally efficient, th
   <figcaption align="center"><b>Figure 1:</b> Tracking performance comparison. The NMPC (Blue) achieves an RMSE of <b>1.36 mm</b>, while the PID (Red Dotted) suffers from massive oscillations and a significantly higher RMSE of <b>5.58 mm</b> due to unmodeled hysteretic transitions.</figcaption>
 </figure>
 
+
 * **Model-Based Advantage**: By leveraging the Sigmoid-NLARX plant model, the NMPC anticipates hysteretic transitions, resulting in the smooth, high-fidelity tracking shown in the top subplot. 
 * **Effort Optimization**: The bottom subplot compares the control effort (Pressure). The NMPC maintains stable, purposeful pressure modulation within the 50–250 kPa saturation limits, whereas the PID effort is erratic and numerically inefficient. 
 
