@@ -33,7 +33,7 @@ This repository is organized into three distinct technical reports that follows 
 
 1. **01-NLARX-SysID-Estimation**: Comparison of different models (NLARX models vs different Kalman Filters) and rejection of Extended Kalman Filter (EKF) and Cubature Kalman Filter (CKF) in favor of Unscented Kalman Filter
 
-2. **02-Monte-Carlo-UKF**: (Work In Progress) Statistical verification of estimator robustness across randomized initial conditions. 
+2. **02-Monte-Carlo-KalmanFilter**: (Work In Progress) Statistical verification of estimator robustness across randomized initial conditions. 
 
 3. **03-Nonlinear-MPC**: (Work In Progress) Real-Time Tracking of Fourier-series references using the NLARX PLant Models for Model Predictive Controls. 
 
