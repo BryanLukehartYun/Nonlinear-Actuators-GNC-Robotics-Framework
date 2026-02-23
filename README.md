@@ -3,6 +3,7 @@
 
 **Preface**: Traditional industry estimators (EKF/CKF) fail on soft-actuator dynamics due to inherent hysteresis and non-differentiable gradient spikes. In this repository, a series of reports aims to create a unified workflow that models, estimates, and predicts a solution to dealing with nonlinear hysteretic actuators. 
 ## Core Success Metrics & Results 
+
 * Model Fidelity - Achieved a 98.2% fitness match using Sigmoid-NLARX models, significantly outperforming standard linear approximations in capturing hysteresis drift inherent to soft actuators. 
 * Bias Rejection - Successfully eliminated -7.5mm tracking bias inherent in EKF/CKF implementations by using a tuned Unscented Kalman Fulter. 
 * Jacobian Diagnostics - Quantified non-differentiable gradient spikes, providing a mathematical basis for the Linearization trap that plagues and causes standard industry estimators to fail. 
