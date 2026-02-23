@@ -1,12 +1,20 @@
 ## Pneumatic Artificial Muscle Nonlinear Dynamics Analysis
 **Nonlinear GNC framework for Pneumatic Artificial Muscles (PAMs). Features NLARX system identification (Sigmoid, Wavelet, idTreePartition) and robust state estimation (Kalman Filters) designed to reject complex hysteresis-induced bias and non-differentiable gradient spikes. Also contains Monte Carlo regarding Unscented Kalman Filter and Model Predictive Control.** 
 
-**Preface**: Traditional industry estimators (EKF/CKF) fail on soft-actuator dynamics due to inherent hysteresis and non-differentiable gradient spikes. In this repository, a series of reports aims to create a unified workflow that models, estimates, and predicts a solution to dealing with nonlinear hysteretic actuators. 
-## Core Success Metrics & Results 
+**Preface**: Traditional industry estimators (EKF/CKF) and controls fail to estimate/ predict soft-actuator dynamics due to inherent nonlinear hysteresis and non-differentiable gradient spikes. This repository contains a high-performance skeleton of the Guidance, Navigation, and Control (GNC) framework for stable open-loop modeling and closed-loop control of McKibben Artifical Muscles. Three reports demonstrates a full-stack engineering pipeline: from identifying non-differentiable plant dynamics to implementing derivative-free state estimation and nonlinear model predictive control over nonlinear hysteretic actuators.
 
-* Model Fidelity - Achieved a 98.2% fitness match using Sigmoid-NLARX models, significantly outperforming standard linear approximations in capturing hysteresis drift inherent to soft actuators. 
-* Bias Rejection - Successfully eliminated -7.5mm tracking bias inherent in EKF/CKF implementations by using a tuned Unscented Kalman Fulter. 
-* Jacobian Diagnostics - Quantified non-differentiable gradient spikes, providing a mathematical basis for the Linearization trap that plagues and causes standard industry estimators to fail. 
+
+## Technical Highlights & Results 
+* Model Fidelity - Achieved a 98.2% fitness match using Sigmoid-NLARX models, significantly outperforming standard linear approximations in capturing hysteresis drift inherent to soft actuators, and stable for driving NMPC optimization. 
+* Derivative-Free Estimation: Implements an **Unscented Kalman Filter** to bypass massive Jacobian spikes (+400 to -1100) that casues standard EKF linearization to fail. Validated robustness by using Monte Carlo simulations. 
+* NMPC Performance: Achieves a 75.6% reduction in trackign error compared to baseline PID controllers in high-nonlinearity environments. 
+
+## Project Architecture & Reports
+| Module | Technical Focus | Key Metric |
+| :--- | :--- | :--- |
+| **[01-NLARX-SysID](./01-NLARX-SysID-Estimation/)** | **Nonlinear System ID** | **98.2% Sigmoid Fitness** |
+| **[02-Monte-Carlo-KalmanFilter](./02-Monte-Carlo-KalmanFilter/)** | **State Estimation** | **Validate Robustness of Sigmoid-NLARX and UKF** |
+| **[03-Nonlinear-MPC](./03-Nonlinear-MPC/)** | **Optimal Control** | **1.36 mm Tracking RMSE** |
 
 ## Institutional Context & Academic Foundation | Technical Expansion
 This framework represents the **technical expansion and demonstration** of research established within the **BioSEL Lab** at the **Rochester Institute of Technology (RIT)**.
@@ -26,7 +34,7 @@ For further information pertaining the research related to thesis under RIT, ple
 | :--- | :--- | :--- |
 | **Recruitment & Professional** | Bryan Lukehart-Yun | [Email bryan.lukehartyun@gmail.com](mailto:bryan.lukehartyun@gmail.com) |
 | **Technical & Repository Help** | Bryan Lukehart-Yun | Open a GitHub Issue |
-| **BioSEL Research & Lab Collaboration** | Dr. Kathleen Lamkin-Kennard | [View RIT Faculty Profile](https://www.rit.edu/directory/kaleme-kathleen-lamkin-kennard) |
+| **BioSEL Lab & Research Collaboration** | Dr. Kathleen Lamkin-Kennard | [View RIT Faculty Profile](https://www.rit.edu/directory/kaleme-kathleen-lamkin-kennard) |
 
 
 ## **Roadmap**
@@ -34,11 +42,11 @@ This repository is organized into three distinct technical reports that follows 
 
 1. **01-NLARX-SysID-Estimation**: Comparison of different models (NLARX models vs different Kalman Filters) and rejection of Extended Kalman Filter (EKF) and Cubature Kalman Filter (CKF) in favor of Unscented Kalman Filter
 
-2. **02-Monte-Carlo-KalmanFilter**: (Work In Progress) Statistical verification of estimator robustness across randomized initial conditions. 
+2. **02-Monte-Carlo-KalmanFilter**: (Done - Further Finetuning) Statistical verification of estimator robustness across randomized initial conditions. Note source code for driving this part is still WIP for git commits. 
 
-3. **03-Nonlinear-MPC**: (Work In Progress) Real-Time Tracking of Fourier-series references using the NLARX PLant Models for Model Predictive Controls. 
+3. **03-Nonlinear-MPC**: (Done - Further Finetuning) Real-Time Tracking of Fourier-series references using the NLARX PLant Models for Model Predictive Controls. Note source code for driving this part is still WIP for git commits. 
 
-4. **04-GNC-Integration**: (Planned). Integrate and expand all three scripts into a single framework and create a coherent closed-loop Model Predictive Control solution. 
+4. **04-GNC-Integration**: (Planned). Integrate and expand all three scripts into a single real-time NMPC + UHKF estimator solution backed by Monte Carlo Simualtions. 
 
 5. **Notice**: Future works may expand or extend the reports here for publications (not limited to the aforementioned journals). This repository is intended to validate and serve as a sample of the work that can be extended to the Industry. 
 
@@ -51,10 +59,10 @@ This project utilizes a **dual-licensing framework** to distinguish between func
 * **Technical Analysis**: The reports, unique figure interpretations, and design-decision narratives contained in the README files are copyright © 2026 Bryan Lukehart-Yun and licensed under **CC BY-NC-ND 4.0**. 
 
 * **Data Attribution**: The provided 10,000-sample dataset containing multiple permutations (.mat) is a series of randomized, non-representative slices **intended for architectural demonstration**.
-Full high-fidelity datasets (15M+ samples) and theoretical derivations are reserved for upcoming publications in T-RO, IJRR, and Data In Brief. 
+Full high-fidelity datasets (15M+ samples) and theoretical derivations are reserved for upcoming publications in T-RO, IJRR, and Data In Brief. Those were collected during graduate research at RIT. 
 
 * **Future Release** The complete 15-million-sample global dataset will be published via Data in Brief; this repository will be updated with the public access links upon release. 
 
-**Citation**: If you utilize this GNC framework or the UKF bias-rejection analysis in your work, please attribute it to this repository or the forthcoming Zenodo DOI. 
+**Citation**: If you utilize this GNC framework or the UKF bias-rejection analysis in your work, please attribute it to this repository or the forthcoming Zenodo DOI. **In the Future, a list of publications will be listed here for future citations to use instead.**
 
 **TL;DR: The MATLAB Code is open-source (MIT License), while the Technical Reports, Analysis, and Figures are protected intellectual property (CC BY-NC-ND 4.0).**
