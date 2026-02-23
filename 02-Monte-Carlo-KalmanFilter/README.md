@@ -1,4 +1,4 @@
-# **Technical Report #2: Monte Carlo Validation of UKF Stability**
+# **Technical Report #2 - Monte Carlo Validation of UKF Stability**
 
 ## **Overview & Data Disclaimer**
 This report evaluates the statistical robustness of the state estimation framework. We subjected both the Sigmoid-NLARX and Wavelet-NLARX models to 100-run Monte Carlo Simulations downsampled to 1/20th of the sample size (500 samples) to validate the Unscented Kalman Filter (UKF) stability under randomized noise and initial conditions. 
