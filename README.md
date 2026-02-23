@@ -7,7 +7,7 @@
 ## Technical Highlights & Results 
 * Model Fidelity - Achieved a 98.2% fitness match using Sigmoid-NLARX models, significantly outperforming standard linear approximations in capturing hysteresis drift inherent to soft actuators, and stable for driving NMPC optimization. 
 * Derivative-Free Estimation: Implements an **Unscented Kalman Filter** to bypass massive Jacobian spikes (+400 to -1100) that casues standard EKF linearization to fail. Validated robustness by using Monte Carlo simulations. 
-* NMPC Performance: Achieves a 75.6% reduction in trackign error compared to baseline PID controllers in high-nonlinearity environments. 
+* NMPC Performance: Achieves a 75.6% reduction in tracking error compared to baseline PID controllers in high-nonlinearity environments. 
 
 ## Project Architecture & Reports
 | Module | Technical Focus | Key Metric |
