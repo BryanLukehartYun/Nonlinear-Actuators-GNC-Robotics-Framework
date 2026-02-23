@@ -20,7 +20,7 @@ The plant was modeled using three distinct Nonlinear ARX (NLARX) models to map p
 
 * **Hysteresis Matching (Figure 2)**: `Sigmoid` (98.2%) and `idTreePartition` (98.4%) achieved the best fitness for large-scale hysteresis loops. Wavelet (76.2%) is kept as a secondary specialist for transient behavior at this stage. 
 <figure>
-  <img src="./assets/Figure_HysteresisNLARXest.jpg" alt="Comparison of NLARX models and Hysteresis">
+  <img src="./assets/Figure_Hysteresis_NLARXest_Fix.jpg" alt="Comparison of NLARX models and Hysteresis">
   <figcaption align="center"><b>Figure 2:</b> Performance comparison between NLARX Models  during hysteretic loading and unloading. Noting that Sigmoid - red and idTreePartition - Dashed Blue closely follows the Measured Hysteresis trends.</figcaption>
 </figure>
 
