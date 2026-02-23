@@ -18,6 +18,8 @@ While standard industrial controllers like PID are computationally efficient, th
 </figure>
 
 
+
+
 * **Model-Based Advantage**: By leveraging the Sigmoid-NLARX plant model, the NMPC anticipates hysteretic transitions, resulting in the smooth, high-fidelity tracking shown in the top subplot. 
 * **Effort Optimization**: The bottom subplot compares the control effort (Pressure). The NMPC maintains stable, purposeful pressure modulation within the 50–250 kPa saturation limits, whereas the PID effort is erratic and numerically inefficient. 
 
