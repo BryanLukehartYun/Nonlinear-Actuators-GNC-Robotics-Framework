@@ -4,7 +4,7 @@
 This report evaluates the statistical robustness of the state estimation framework. We subjected both the Sigmoid-NLARX and Wavelet-NLARX models to 100-run Monte Carlo Simulations downsampled to 1/20th of the sample size (500 samples) to validate the Unscented Kalman Filter (UKF) stability under randomized noise and initial conditions. 
 
 * **Technical Analysis**: All figures and metrics are derived from high-fidelity research data (10,000 Samples) based on canonical soft actuator profiles. 
-* **Licensing**: Documentation, visuals (figures), and analysis written here are licensed under **CC BY 4.0**. The MATLAB code are covered under MIT License. 
+* **Licensing**: Documentation, visuals (figures), and analysis written here are licensed under **CC BY-NC-ND 4.0**. The MATLAB code are covered under MIT License. 
 * **Research Integrity**: Raw batch-processing data remains under embargo pending formal publication in ***Data in Brief***. 
 
 ---
