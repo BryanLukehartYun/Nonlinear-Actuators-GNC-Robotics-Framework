@@ -1,4 +1,4 @@
-# Technical Report #1 - Nonlinear System ID & Strate Estimation
+# Technical Report #1 - Nonlinear System ID & State Estimation
 ## Overview & Data Disclaimer
 This report evaluates a standalone GNC framework for nonlinear pneumatic actuators.
 * Technical Analysis: All figures and metrics (e.g. the 98.2% Fitness) are derived from a high fidelity 10,000 sample research dataset.
