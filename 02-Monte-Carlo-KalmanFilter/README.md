@@ -19,7 +19,7 @@ To simulate pneumatic variance and sensor noise, the estimator was subjected to 
 
 * **Statistical Consistency**: Both models demonstrated 100% convergence across the test batch, with the 3σ bounds tightly containing the plant dynamics during high-frequency transitions. 
 The UKF demonstrated repeatable bias rejection, maintaining a stable RMSE across the entire batch.
-* **Wavelet Performnance**: The Wavelet-UKF remains a viable secondary model, showing lsighyly more dispersion during the intiial transient but still maintained steady-state tracking. 
+* **Wavelet Performnance**: The Wavelet-UKF remains a viable secondary model, showing slightly more dispersion during the intiial transient but still maintained steady-state tracking. 
 * **Sigmoid Performance**: The Sigmoid-UKF exhibits consistently high RMSE stability and narrower confidence intervals, confirming its selection for the final control framework. 
 * **Convergence**: 100% of runs achieved steady-state tracking within the required real-time window, validating the architecture for the upcoming MPC framework.
 
