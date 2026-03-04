@@ -17,7 +17,7 @@
 | **[01-NLARX-SysID](./01-NLARX-SysID-Estimation/)** | **Nonlinear System ID** | **98.2% Sigmoid Fitness** |
 | **[02-Monte-Carlo-KalmanFilter](./02-Monte-Carlo-KalmanFilter/)** | **State Estimation** | **Validate Robustness of Sigmoid-NLARX and UKF** |
 | **[03-Nonlinear-MPC](./03-Nonlinear-MPC/)** | **Optimal Control** | **1.36 mm Tracking RMSE** |
-
+| **[03.5-LinkedInReport](./03.5-DynamicPertubationNMPC_LinkedIn/)** | **Dynamic Pertubation** | **3.71 mm RMSE when subject to variable range** |
 ## Institutional Context & Academic Foundation | Technical Expansion
 This framework represents the **technical expansion and demonstration** of research established within the **BioSEL Lab** at the **Rochester Institute of Technology (RIT)**.
 
@@ -48,9 +48,11 @@ This repository is organized into three distinct technical reports that follows 
 
 3. **03-Nonlinear-MPC**: (Done - Further Finetuning) Real-Time Tracking of Fourier-series references using the NLARX PLant Models for Model Predictive Controls. Note source code for driving this part is still WIP for git commits. 
 
-4. **04-GNC-Integration**: (Planned). Integrate and expand all three scripts into a single real-time NMPC + UHKF estimator solution backed by Monte Carlo Simualtions. 
+4. **03.5-DynamicPertubationNMPC_LinkedIn** (Done - May Fill out ReadMe at a Later date) This report is linked to the LinkedIn Post that was made recently, it largely deals with adding pertubations ranging from 50-120% gain stimulating pressure leakages, additional effort spikes, and other factors that might arise to sustained burst (showcasing that 120% was where the NMPC started to become unstable). The ReadMe for this folder is intentionally left sparse. 
 
-5. **Notice**: Future works may expand or extend the reports here for publications (not limited to the aforementioned journals). This repository is intended to validate and serve as a sample of the work that can be extended to the Industry. 
+5. **04-GNC-Integration**: (Planned). Integrate and expand all three scripts into a single real-time NMPC + UHKF estimator solution backed by Monte Carlo Simualtions. 
+
+6. **Notice**: Future works may expand or extend the reports here for publications (not limited to the aforementioned journals). This repository is intended to validate and serve as a sample of the work that can be extended to the Industry. 
 
 ## **Licensing & Intellectual Property**
 
