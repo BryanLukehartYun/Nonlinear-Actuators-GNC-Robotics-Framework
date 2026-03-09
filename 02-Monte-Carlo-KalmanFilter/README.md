@@ -12,10 +12,9 @@ This report evaluates the statistical robustness of the state estimation framewo
 ## **1. Comparative Robustness: Sigmoid vs Wavelet**
 To simulate pneumatic variance and sensor noise, the estimator was subjected to randomized initial conditions and Gaussian noise injections across 100 iterations with randomized state initialization and Gaussian noise injections. 
 
-<figure>
-  <img src="./assets/MonteCarloComparison.jpg" alt="Monte Carlo UKF Tracking Error">
-  <figcaption align="center"><b>Figure 1:</b> Monte Carlo robustness validation (N=100) for Sigmoid (Left) and Wavelet (Right) models. Gray regions represent Monte Carlo dispersions; Blue lines represent the mean estimate; Red dashed lines represent the 3σ confidence boundaries.</figcaption>
-</figure>
+![Figure 1](./assets/MonteCarloComparison.jpg)
+*Figure 1: Monte Carlo robustness validation (N=100) for Sigmoid (Left) and Wavelet (Right) models. Gray regions represent Monte Carlo dispersions; Blue lines represent the mean estimate; Red dashed lines represent the 3σ confidence boundaries.*
+
 
 * **Statistical Consistency**: Both models demonstrated 100% convergence across the test batch, with the 3σ bounds tightly containing the plant dynamics during high-frequency transitions. 
 The UKF demonstrated repeatable bias rejection, maintaining a stable RMSE across the entire batch.

@@ -37,6 +37,7 @@ Before selecting an estimator, a **Jacobian Proxy** analysis was performed to ev
   <figcaption align="center"><b>Figure 3:</b> Jacobian Gradient by Proxy showing that gradient spikes emerges massively across all three distinct NLARX Models. </figcaption>
 </figure>
 
+
 * **Decision**: These spikes indicate that an Extended Kalman Filter (EKF) will be chronically ill-defined or ill-conditioned. To avoid this "Linearization Trap," the analytsis moved toward derivative-free sampling methods like the **UKF** primarily. 
 
 
@@ -58,11 +59,8 @@ Three Kalman variants (EKF, UKF, CKF) were benchmarked against measured length d
 ---
 
 ## **Conclusion: Final Architecture Selection**
-<figure>
-  <img src="./assets/Figure_HysteresisKalmanFilt.jpg" alt="Kalman Filter Comparison to NLARX Plant and Measured Hysteresis">
-  <figcaption align="center"><b>Figure 5:</b> Time-series comparison between three NLARX Models plant fed into each Kalman Filter. From Top to Bottom: Sigmoid | Wavelet | idTreePartition</figcaption>
-</figure>
-
+![Figure 5](./assets/Figure_HysteresisKalmanFilt.jpg)
+*<b>Figure 5:</b> Time-series comparison between three NLARX Models plant fed into each Kalman Filter. From Top to Bottom: Sigmoid | Wavelet | idTreePartition*
 
 
 **Figure 5** illustrates the final comparison: despite the inherent difficulty in tracking raw hysteresis, the **Sigmoid NLARX + UKF** combination emerged as the most stable architecture. It provides the necessary gradient smoothness for the filter while rejecting the biases that crippled standard industry estimators. It is however worth noting that if Pressure-Length Hysteresis were to be the desired target instead of RMSE fit, the Sigmoid NLARX + EKF and the Wavelet NLARX + UKF should be added as a secondary focus if time permits for extension. 
