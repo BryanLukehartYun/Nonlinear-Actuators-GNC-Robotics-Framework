@@ -42,17 +42,21 @@ For further information pertaining the research related to thesis under RIT, ple
 ## **Roadmap**
 This repository is organized into three distinct technical reports that follows **Input $\rightarrow$ Evidence $\rightarrow$ Decision framework**. This functionally amounts to a **Guidance, Navigation, and Control (GNC)** stack-equivalent. 
 
-1. **01-NLARX-SysID-Estimation**: Comparison of different models (NLARX models vs different Kalman Filters) and rejection of Extended Kalman Filter (EKF) and Cubature Kalman Filter (CKF) in favor of Unscented Kalman Filter
+1. **01-NLARX-SysID-Estimation**: Comparison of different models (NLARX models vs different Kalman Filters) and rejection of Extended Kalman Filter (EKF) and Cubature Kalman Filter (CKF) in favor of Unscented Kalman Filter.
 
-2. **02-Monte-Carlo-KalmanFilter**: (Done - Further Finetuning) Statistical verification of estimator robustness across randomized initial conditions. Note source code for driving this part is still WIP for git commits. 
+2. **02-Monte-Carlo-KalmanFilter**: (Done - Further Finetuning) Statistical verification of estimator robustness across randomized initial conditions. Please refer to the note at the bottom for more information. 
 
-3. **03-Nonlinear-MPC**: (Done - Further Finetuning) Real-Time Tracking of Fourier-series references using the NLARX PLant Models for Model Predictive Controls. Note source code for driving this part is still WIP for git commits. 
+3. **03-Nonlinear-MPC**: (Done - Further Finetuning) Real-Time Tracking of Fourier-series references using the NLARX PLant Models for Model Predictive Controls. Note source code for driving this part is embargoed. Please refer to the note at the bottom for more information. 
 
 4. **03.5-DynamicPertubationNMPC_LinkedIn** (Done - May Fill out ReadMe at a Later date) This report is linked to the LinkedIn Post that was made recently, it largely deals with adding pertubations ranging from 50-120% gain stimulating pressure leakages, additional effort spikes, and other factors that might arise to sustained burst (showcasing that 120% was where the NMPC started to become unstable). The ReadMe for this folder is intentionally left sparse. 
 
 5. **04-GNC-Integration**: (Planned). Integrate and expand all three scripts into a single real-time NMPC + UHKF estimator solution backed by Monte Carlo Simualtions. 
 
 6. **Notice**: Future works may expand or extend the reports here for publications (not limited to the aforementioned journals). This repository is intended to validate and serve as a sample of the work that can be extended to the Industry. 
+
+> **Note:** Full source code for Reports 02 and 03 will be released 
+> publicly following publication. License will be updated to CC BY 4.0 
+> for figures and reports at that time.
 
 ## **Licensing & Intellectual Property**
 
